@@ -1,0 +1,58 @@
+body,
+html {
+    padding: 15;
+    height: 100%;
+    background: #000000;
+    background: linear-gradient(to right, #000000, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#gridTitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align-last: right;
+    text-transform: uppercase;
+}
+
+[colorValue~="default"] {
+    color: rgb(94, 146, 245);
+}
+
+[colorValue~="void"] {
+    color: rgb(136, 17, 136);
+}
+
+[colorValue~="arc"] {
+    color: rgb(12, 151, 238);
+}
+
+[colorValue~="solar"] {
+    color: rgb(243, 117, 0);
+}
+
+.gridStyle {
+    border: 1px solid rgb(46, 46, 46);
+    border-top: 2px solid;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a[class~="active"] {
+    font-weight: bold;
+}
+
+[blockValue~="deadend"] {
+    background-color: rgb(243, 7, 7);
+}
+
+[blockValue~="path"] {
+    background-color: rgb(104, 104, 104);
+}
+
+[blockValue~="wall"] {
+    background-color: rgb(255, 255, 255);
+}
+
+[blockValue~="step"] {
+    background-color: rgb(94, 146, 245);
+}

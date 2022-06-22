@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Zero Hour Challenge</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column h-100" onload="displayGrid(grid3,'Grid-void')">
+    <div class="container-fluid">
+        <nav class="nav">
+            <a class="nav-link " href="Index.html">Home</a>
+            <a class="nav-link active" href="ZeroHour.html">Zero Hour</a>
+        </nav>
+        <div class="row mt-1 mx-auto">
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-header bg-primary text-white">Zero Hour Challenge </h3>
+                    <div class="card-body">
+                        <!--description for coding challenge-->
+                        <div>
+                            <p> Inspired Destiny 2 by Bungie, inc.</p>
+                            <p> You are given a matrix of booleans that represents a grid. Each True
+                                boolean represents a wall. Each False boolean represents a tile you can walk on.
+                                Given this matrix with an unknown start coordinate and an unkown end coordinate return
+                                the number of steps required to reach the end coordinate from the start. The start
+                                square is located in row 0 and the end coordiante is located on the last row. If there is no
+                                possible path, then return null. You can move up, left, down, and right. You cannot move
+                                through walls. You cannot wrap around the edges of the grid.</p>
+                        </div>
+                        <div>
+                            <h6>This is the <b> Grid</b>:</h6>
+                            <div class="card card-body card-text text-center gridstyle">
+                                [t, t, t, f, t],<br>
+                                [t, t, t, f, f],<br>
+                                [f, f, f, t, f],<br>
+                                [f, t, f, f, f],<br>
+                                [f, f, t, t, t],<br>
+                                [t, f, t, t, t]
+                            </div>
+                            <p> 
+                                The <b> Path </b> that can be walked on is represented by Gray Tiles. 
+                                <br> The minimum <b> Steps </b> to reach the exit of the maze is represented by Blue Tiles.
+                                
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Pick a Grid
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <button class="dropdown-item" id="btnGrid3"
+                                                onclick="displayGrid(grid3,'Grid-void')"
+                                                type="button">Grid-Void</button>
+                                            <button class="dropdown-item" id="btnGrid4"
+                                                onclick="displayGrid(grid4,'Grid-arc')"
+                                                type="button">Grid-Arc</button>
+                                            <button class="dropdown-item" id="btnGrid5"
+                                                onclick="displayGrid(grid5,'Grid-solar')"
+                                                type="button">Grid-Solar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-right">
+                                    <button class="btn btn-primary" onclick="solveMazeZH()">Solve</button>
+                                </div>
+                            </div>
+                            <div class="row align-items-start">
+                                <div class="col align-self-start text-success mt-3 " id="results"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 id="gridTitle" colorValue="void">Grid-void</h1>
+                <table id="gridDisplay" class="table h-100 gridStyle">
+                    <!--template for grid items go here-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted">Learn to Code at <a href="https://coderfoundry.com" target="_blank">Coder
+                    Foundry</a></span>
+        </div>
+    </footer>
+
+    <script src="template.js"></script>
+    <script src="mazerunner.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>
